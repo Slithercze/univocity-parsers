@@ -703,7 +703,7 @@ public class AnnotationHelper {
 		} else {
 			description = "method '" + ((Method) element).getName() + "'";
 		}
-		return description + " of class " + getDeclaringClass(element).getName();
+		return description;
 	}
 
 	private static void processAnnotations(AnnotatedElement element, boolean processNested, List<Integer> indexes, List<TransformedHeader> tmp, Map<AnnotatedElement, List<TransformedHeader>> nestedReplacements, HeaderTransformer transformer, MethodFilter filter) {

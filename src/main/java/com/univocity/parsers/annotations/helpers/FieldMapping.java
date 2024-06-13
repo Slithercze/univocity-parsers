@@ -388,11 +388,11 @@ public class FieldMapping {
 				((Field) target).set(instance, value);
 			}
 		} catch (Throwable e) {
-			String valueTypeName = value == null ? null : value.getClass().getName();
+			String valueTypeName = value == null ? null : value.getClass().getSimpleName();
 			String msg;
 			String details = null;
 			if (valueTypeName != null) {
-				msg = "Unable to set value '{value}' of type '" + valueTypeName + "' to " + toString();
+				msg = "Unable to set value '{value}' to " + toString();
 			} else {
 				msg = "Unable to set value 'null' to " + toString();
 			}
